@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="https://LiXianfeng0109.github.io">
   <title>排序算法--插入排序 | 李先锋的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="12345678910111213141516171819202122public class SortInsert &amp;#123;    public static void Insert(int[] array)&amp;#123;        for (int i = 1; i &amp;lt; array.length; i++) &amp;#123;            for (int j = i; j">
+  <meta name="description" content="排序算法–插入排序">
 <meta name="keywords" content="数据结构,排序算法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="排序算法--插入排序">
 <meta property="og:url" content="https:&#x2F;&#x2F;lixianfeng0109.github.io&#x2F;2019&#x2F;12&#x2F;09&#x2F;%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95-%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F&#x2F;index.html">
 <meta property="og:site_name" content="李先锋的个人博客">
-<meta property="og:description" content="12345678910111213141516171819202122public class SortInsert &amp;#123;    public static void Insert(int[] array)&amp;#123;        for (int i = 1; i &amp;lt; array.length; i++) &amp;#123;            for (int j = i; j">
+<meta property="og:description" content="排序算法–插入排序">
 <meta property="og:locale" content="zh">
-<meta property="og:updated_time" content="2020-04-22T08:36:16.199Z">
+<meta property="og:updated_time" content="2020-04-22T11:51:44.187Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="李先锋的个人博客" type="application/atom+xml">
@@ -86,11 +86,11 @@
 		<nav class="header-nav">
 			<div class="social">
 				
+					<a class="github" href="https://github.com/LiXianfeng0109" target="_blank" rel="noopener" title="github"><i class="icon-github"></i></a>
+		        
 					<a class="qq" href="/LiXianfeng0109.github.io/assets/qq.jpg" title="qq"><i class="icon-qq"></i></a>
 		        
 					<a class="weixin" href="/LiXianfeng0109.github.io/assets/wechat.jpg" title="weixin"><i class="icon-weixin"></i></a>
-		        
-					<a class="mail" href="/LiXianfeng0109.github.io/mailto:13018044146@163.com" title="mail"><i class="icon-mail"></i></a>
 		        
 			</div>
 			<!-- 网易云音乐插件 -->
@@ -132,11 +132,11 @@
 			<nav class="header-nav">
 				<div class="social">
 					
+						<a class="github" href="https://github.com/LiXianfeng0109" target="_blank" rel="noopener" title="github"><i class="icon-github"></i></a>
+			        
 						<a class="qq" href="/LiXianfeng0109.github.io/assets/qq.jpg" title="qq"><i class="icon-qq"></i></a>
 			        
 						<a class="weixin" href="/LiXianfeng0109.github.io/assets/wechat.jpg" title="weixin"><i class="icon-weixin"></i></a>
-			        
-						<a class="mail" href="/LiXianfeng0109.github.io/mailto:13018044146@163.com" title="mail"><i class="icon-mail"></i></a>
 			        
 				</div>
 			</nav>
@@ -186,12 +186,13 @@
         
       </header>
       <div align="center" class="post-count">
-          字数：100字 | 预计阅读时长：1分钟
+          字数：108字 | 预计阅读时长：1分钟
       </div>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <a id="more"></a>
+        <p>排序算法–插入排序</p>
+<a id="more"></a>
 
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SortInsert</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Insert</span><span class="params">(<span class="keyword">int</span>[] array)</span></span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; array.length; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = i; j &gt; <span class="number">0</span> &amp;&amp; array[j] &lt; array[j - <span class="number">1</span>]; j--) &#123;</span><br><span class="line">                <span class="keyword">int</span> temp = array[j];</span><br><span class="line">                array[j] = array[j-<span class="number">1</span>];</span><br><span class="line">                array[j-<span class="number">1</span>] = temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] numbers = <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">5</span>,<span class="number">2</span>,<span class="number">7</span>,<span class="number">3</span>,<span class="number">8</span>,<span class="number">9</span>&#125;;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> number:numbers) &#123;</span><br><span class="line">            System.out.print(number + <span class="string">","</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println();</span><br><span class="line">        Insert(numbers);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> number:numbers) &#123;</span><br><span class="line">            System.out.print(number + <span class="string">","</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
@@ -392,7 +393,9 @@
         }
     setInterval("createtime()",250);
     </script>
-    
+  </div>
+
+  
         <!-- 不蒜子统计 -->
         <span id="busuanzi_container_site_pv">
                 您是第 <span id="busuanzi_value_site_pv"></span> 位小伙伴
@@ -401,9 +404,8 @@
         <span id="busuanzi_container_site_uv" style='display:none'>
                 历经 <span id="busuanzi_value_site_uv"></span> 次回眸才等到与你相遇
         </span>
-        <script async src="/busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
     
-  </div>
 
 </footer>
 
@@ -499,10 +501,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">数据结构</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">堆排序</a>
               </li>
              
               <li class="article-tag-list-item">
