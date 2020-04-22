@@ -6,16 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>我的第一篇博客 | 李先锋的个人博客</title>
+  <title>Mybatis的入门 | 李先锋的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="经过两天的捣鼓，终于部署了一个属于自己的博客网站，以后在互联网上就有我的一个小空间，激动。虽然没什么人会来看吧，但是可以把近期学习的东西记录下来，见证自己的成长过程。">
+  <meta name="description" content="Mybatis的入门">
+<meta name="keywords" content="Mybatis">
 <meta property="og:type" content="article">
-<meta property="og:title" content="我的第一篇博客">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;09&#x2F;%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2&#x2F;index.html">
+<meta property="og:title" content="Mybatis的入门">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;02&#x2F;04&#x2F;Mybatis%E7%9A%84%E5%85%A5%E9%97%A8&#x2F;index.html">
 <meta property="og:site_name" content="李先锋的个人博客">
-<meta property="og:description" content="经过两天的捣鼓，终于部署了一个属于自己的博客网站，以后在互联网上就有我的一个小空间，激动。虽然没什么人会来看吧，但是可以把近期学习的东西记录下来，见证自己的成长过程。">
+<meta property="og:description" content="Mybatis的入门">
 <meta property="og:locale" content="zh">
-<meta property="og:updated_time" content="2019-11-13T07:00:35.220Z">
+<meta property="og:updated_time" content="2020-04-22T04:04:08.668Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="李先锋的个人博客" type="application/atom+xml">
@@ -161,20 +162,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-我的第一篇博客" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Mybatis的入门" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      我的第一篇博客
+      Mybatis的入门
     </h1>
   
 
         
-        <a href="/2019/11/09/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
-  	<time datetime="2019-11-09T15:11:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-09</time>
+        <a href="/2020/02/04/Mybatis%E7%9A%84%E5%85%A5%E9%97%A8/" class="archive-article-date">
+  	<time datetime="2020-02-04T08:39:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-04</time>
 </a>
 
         <!-- 不蒜子统计 -->
@@ -185,17 +186,28 @@
         
       </header>
       <div align="center" class="post-count">
-          字数：132字 | 预计阅读时长：1分钟
+          字数：667字 | 预计阅读时长：3分钟
       </div>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>经过两天的捣鼓，终于部署了一个属于自己的博客网站，以后在互联网上就有我的一个小空间，激动。虽然没什么人会来看吧，但是可以把近期学习的东西记录下来，见证自己的成长过程。</p>
-<a id="more"></a>
+        <h1 id="Mybatis的入门"><a href="#Mybatis的入门" class="headerlink" title="Mybatis的入门"></a>Mybatis的入门</h1><a id="more"></a>
 
-<p>第一次写博客哈，不知道写点什么，就分享一下喜欢的音乐吧。</p>
-<h3 id="Dream-it-Possible"><a href="#Dream-it-Possible" class="headerlink" title="Dream it Possible"></a>Dream it Possible</h3><p>这是2019年考研的时候循环次数最多的一首歌，给了我坚持下去的动力。</p>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=38592976&auto=0&height=66"></iframe>
+<hr>
+<h3 id="1-mybatis的环境搭建"><a href="#1-mybatis的环境搭建" class="headerlink" title="1. mybatis的环境搭建"></a>1. mybatis的环境搭建</h3><pre><code>- 创建maven工程并导入坐标
+- 创建实体类和dao的接口
+- 创建mybatis的主配置文件 SqlMapConfig.xml
+- 创建映射配置文件  UserDao.xml</code></pre><h3 id="2-环境搭建的注意事项"><a href="#2-环境搭建的注意事项" class="headerlink" title="2. 环境搭建的注意事项"></a>2. 环境搭建的注意事项</h3><pre><code>- mybatis映射配置文件要和dao接口的包结构相同
+- 映射配置文件UserDao.xml中的mapper标签namespace属性取值是dao接口的全限定类名
+- 映射配置文件UserDao.xml中的操作配置，id属性的取值是dao接口的方法名</code></pre><p>当我们开发过程中遵守这三个规则，就无需再写dao的实现类。</p>
+<h3 id="3-mybatis的配置文件"><a href="#3-mybatis的配置文件" class="headerlink" title="3. mybatis的配置文件"></a>3. mybatis的配置文件</h3><h5 id="Config的约束："><a href="#Config的约束：" class="headerlink" title="Config的约束："></a>Config的约束：</h5><p>一般这个config的配置文件的约束的名字叫做：SqlMapConfig.xml(在resources中)</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE configuration  </span></span><br><span class="line"><span class="meta">  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"  </span></span><br><span class="line"><span class="meta">  "http://mybatis.org/dtd/mybatis-3-config.dtd"&gt;</span></span><br></pre></td></tr></table></figure>
+<h5 id="Mapper的约束："><a href="#Mapper的约束：" class="headerlink" title="Mapper的约束："></a>Mapper的约束：</h5><p>Mapper的配置文件约束是在resources中与其main中java下接口的相应文件相对应，简单来说，main中文件夹是包属性例如：top.lixianfeng.dao，属于三级结构，但是在resources中目录属于一级结构，需注意。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE mapper</span></span><br><span class="line"><span class="meta">        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"</span></span><br><span class="line"><span class="meta">        "http://mybatis.org/dtd/mybatis-3-mapper.dtd"&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="4-mybatis的入门案例"><a href="#4-mybatis的入门案例" class="headerlink" title="4. mybatis的入门案例"></a>4. mybatis的入门案例</h3><h5 id="SqlMapConfig-xml："><a href="#SqlMapConfig-xml：" class="headerlink" title="SqlMapConfig.xml："></a>SqlMapConfig.xml：</h5><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE configuration</span></span><br><span class="line"><span class="meta">        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"</span></span><br><span class="line"><span class="meta">        "http://mybatis.org/dtd/mybatis-3-config.dtd"&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- mybaits的主配置文件--&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 配置环境--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">environments</span> <span class="attr">default</span>=<span class="string">"mysql"</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 配置mysql环境--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">environment</span> <span class="attr">id</span>=<span class="string">"mysql"</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!-- 配置事务类型--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">transactionManager</span> <span class="attr">type</span>=<span class="string">"JDBC"</span>&gt;</span><span class="tag">&lt;/<span class="name">transactionManager</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!-- 配置数据源（连接池）--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dataSource</span> <span class="attr">type</span>=<span class="string">"POOLED"</span>&gt;</span></span><br><span class="line">                <span class="comment">&lt;!-- 配置连接数据库的4个基本信息--&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"driver"</span> <span class="attr">value</span>=<span class="string">"com.mysql.jdbc.Driver"</span>/&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"url"</span> <span class="attr">value</span>=<span class="string">"jdbc:mysql:///day01"</span>/&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"username"</span> <span class="attr">value</span>=<span class="string">"root"</span>/&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"password"</span> <span class="attr">value</span>=<span class="string">""</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">dataSource</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">environment</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">environments</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 指定映射配置文件的位置，映射配置文件是指每个dao独立的配置文件--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mappers</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">mapper</span> <span class="attr">resource</span>=<span class="string">"top/lixianfeng/dao/UserDao.xml"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">mappers</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="UserDao-xml："><a href="#UserDao-xml：" class="headerlink" title="UserDao.xml："></a>UserDao.xml：</h5><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE mapper</span></span><br><span class="line"><span class="meta">        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"</span></span><br><span class="line"><span class="meta">        "http://mybatis.org/dtd/mybatis-3-mapper.dtd"&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- namespace属性取值是dao接口的全限定类名--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">mapper</span> <span class="attr">namespace</span>=<span class="string">"top.lixianfeng.dao.UserDao"</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 配置查询所有--&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- id取值是dao接口的方法名--&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- resultType的作用就是返回封装的位置，如果你要是不写的话，最后mybatis是不知道你到底要封装到哪里，会出现错误--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">"findAll"</span> <span class="attr">resultType</span>=<span class="string">"top.lixianfeng.domain.User"</span>&gt;</span></span><br><span class="line">        select * from user;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">mapper</span>&gt;</span></span><br></pre></td></tr></table></figure>
       
 
 
@@ -235,6 +247,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color3">Mybatis</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -285,7 +308,7 @@
     <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=2019/11/09/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=2020/02/04/Mybatis%E7%9A%84%E5%85%A5%E9%97%A8/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -299,15 +322,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/11/19/%E4%BB%8E0%E5%88%B01%EF%BC%8C%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          从0到1，搭建Hexo博客
-        
-      </div>
-    </a>
   
+    <a href="/2019/12/11/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95-%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">排序算法-希尔排序</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
@@ -332,7 +351,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Dream-it-Possible"><span class="toc-number">1.</span> <span class="toc-text">Dream it Possible</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Mybatis的入门"><span class="toc-number">1.</span> <span class="toc-text">Mybatis的入门</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-mybatis的环境搭建"><span class="toc-number">1.0.1.</span> <span class="toc-text">1. mybatis的环境搭建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-环境搭建的注意事项"><span class="toc-number">1.0.2.</span> <span class="toc-text">2. 环境搭建的注意事项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-mybatis的配置文件"><span class="toc-number">1.0.3.</span> <span class="toc-text">3. mybatis的配置文件</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Config的约束："><span class="toc-number">1.0.3.0.1.</span> <span class="toc-text">Config的约束：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Mapper的约束："><span class="toc-number">1.0.3.0.2.</span> <span class="toc-text">Mapper的约束：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-mybatis的入门案例"><span class="toc-number">1.0.4.</span> <span class="toc-text">4. mybatis的入门案例</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#SqlMapConfig-xml："><span class="toc-number">1.0.4.0.1.</span> <span class="toc-text">SqlMapConfig.xml：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#UserDao-xml："><span class="toc-number">1.0.4.0.2.</span> <span class="toc-text">UserDao.xml：</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>

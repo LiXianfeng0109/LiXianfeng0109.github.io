@@ -9,6 +9,7 @@
   <title>从0到1，搭建Hexo博客 | 李先锋的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="从0到1，教你在Windows上搭建Hexo博客">
+<meta name="keywords" content="Hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="从0到1，搭建Hexo博客">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;19&#x2F;%E4%BB%8E0%E5%88%B01%EF%BC%8C%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2&#x2F;index.html">
@@ -20,7 +21,7 @@
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;19&#x2F;%E4%BB%8E0%E5%88%B01%EF%BC%8C%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2&#x2F;hexoinit.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;19&#x2F;%E4%BB%8E0%E5%88%B01%EF%BC%8C%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2&#x2F;hexosblog.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;19&#x2F;%E4%BB%8E0%E5%88%B01%EF%BC%8C%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2&#x2F;hexochrome.png">
-<meta property="og:updated_time" content="2019-11-19T06:34:16.612Z">
+<meta property="og:updated_time" content="2019-11-19T06:51:55.216Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;19&#x2F;%E4%BB%8E0%E5%88%B01%EF%BC%8C%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2&#x2F;gitversion.png">
   
@@ -68,10 +69,10 @@
 			</ul>
 		</nav>
 		<!-- <nav>
-    		总文章数 2
+    		总文章数 11
 		</nav>
 		<nav>
-		    总字数 <span class="post-count">692</span>
+		    总字数 <span class="post-count">2.5k</span>
 		</nav> -->
 		<nav class="header-smart-menu">
     		
@@ -191,7 +192,7 @@
         
       </header>
       <div align="center" class="post-count">
-          字数：560字 | 预计阅读时长：2分钟
+          字数：613字 | 预计阅读时长：2分钟
       </div>
     
     <div class="article-entry" itemprop="articleBody">
@@ -213,7 +214,7 @@
 <li>安装完成，打开Git Bash，输入<kbd>node -v</kbd>查看版本</li>
 </ul>
 <p>3.安装 Hexo</p>
-<p>   以上是搭建Hexo的基础，下面开始创建一个属于自己的hexo博客</p>
+<p>以上是搭建Hexo的基础，下面开始创建一个属于自己的hexo博客</p>
 <ul>
 <li>先创建一个文件，用于存放自己的blog文件，在该文件夹下，右键打开Git Bash</li>
 <li>安装hexo命令：<kbd>npm i -g hexo</kbd></li>
@@ -232,13 +233,9 @@
 </li>
 </ul>
 <h2 id="本地调试Hexo博客"><a href="#本地调试Hexo博客" class="headerlink" title="本地调试Hexo博客"></a>本地调试Hexo博客</h2><ol>
-<li><p>在blog文件夹目录下，右键打开Git Bash，输入<kbd>hexo s</kbd><br><img src="/2019/11/19/%E4%BB%8E0%E5%88%B01%EF%BC%8C%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2/hexosblog.png" alt="发布在本地查看"></p>
-</li>
-<li><p>在本地浏览器打开<kbd>localhost:4000</kbd>查看博客<br><img src="/2019/11/19/%E4%BB%8E0%E5%88%B01%EF%BC%8C%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2/hexochrome.png" alt="hexo在浏览器中查看"></p>
-</li>
-</ol>
-<p>3.hexo相关命令</p>
-<ul>
+<li>在blog文件夹目录下，右键打开Git Bash，输入<kbd>hexo s</kbd><br><img src="/2019/11/19/%E4%BB%8E0%E5%88%B01%EF%BC%8C%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2/hexosblog.png" alt="发布在本地查看"></li>
+<li>在本地浏览器打开<kbd>localhost:4000</kbd>查看博客<br><img src="/2019/11/19/%E4%BB%8E0%E5%88%B01%EF%BC%8C%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2/hexochrome.png" alt="hexo在浏览器中查看"></li>
+<li>hexo相关命令<ul>
 <li><kbd>hexo s</kbd>：启动本地服务器，用于预览<ul>
 <li>hexo s是hexo server的缩写</li>
 <li>预览同时可以对文章、主题修改，刷新页面即可</li>
@@ -267,6 +264,9 @@
 </ul>
 </li>
 </ul>
+</li>
+</ol>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>个人的本地Hexo博客就搭建完成了，后面会介绍如何发布到Github上面，之后我们就可以在互联网上通过浏览器访问到自己的博客。</p>
 
       
 
@@ -307,6 +307,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color5">Hexo</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -371,6 +382,15 @@
   
 <nav id="article-nav">
   
+    <a href="/2019/11/19/%E5%A6%82%E4%BD%95%E5%B0%86%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B8%83%E5%88%B0Github%E4%B8%8A/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          如何将自己的博客发布到Github上
+        
+      </div>
+    </a>
+  
   
     <a href="/2019/11/09/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">我的第一篇博客</div>
@@ -400,7 +420,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#准备工作"><span class="toc-number">1.</span> <span class="toc-text">准备工作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#本地调试Hexo博客"><span class="toc-number">2.</span> <span class="toc-text">本地调试Hexo博客</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#准备工作"><span class="toc-number">1.</span> <span class="toc-text">准备工作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#本地调试Hexo博客"><span class="toc-number">2.</span> <span class="toc-text">本地调试Hexo博客</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-number">3.</span> <span class="toc-text">总结</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -555,6 +575,30 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">Mybatis</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">数据结构 堆排序</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">python matplotlib</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">数据库</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">数据结构 排序算法</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>

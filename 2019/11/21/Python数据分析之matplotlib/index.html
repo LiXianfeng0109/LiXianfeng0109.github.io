@@ -6,16 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>我的第一篇博客 | 李先锋的个人博客</title>
+  <title>Python数据分析之matplotlib | 李先锋的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="经过两天的捣鼓，终于部署了一个属于自己的博客网站，以后在互联网上就有我的一个小空间，激动。虽然没什么人会来看吧，但是可以把近期学习的东西记录下来，见证自己的成长过程。">
+  <meta name="description" content="本篇文章教你学习python中的绘图库matplotlib。">
+<meta name="keywords" content="python matplotlib">
 <meta property="og:type" content="article">
-<meta property="og:title" content="我的第一篇博客">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;09&#x2F;%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2&#x2F;index.html">
+<meta property="og:title" content="Python数据分析之matplotlib">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;21&#x2F;Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E4%B9%8Bmatplotlib&#x2F;index.html">
 <meta property="og:site_name" content="李先锋的个人博客">
-<meta property="og:description" content="经过两天的捣鼓，终于部署了一个属于自己的博客网站，以后在互联网上就有我的一个小空间，激动。虽然没什么人会来看吧，但是可以把近期学习的东西记录下来，见证自己的成长过程。">
+<meta property="og:description" content="本篇文章教你学习python中的绘图库matplotlib。">
 <meta property="og:locale" content="zh">
-<meta property="og:updated_time" content="2019-11-13T07:00:35.220Z">
+<meta property="og:updated_time" content="2019-11-21T03:26:44.769Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="李先锋的个人博客" type="application/atom+xml">
@@ -161,20 +162,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-我的第一篇博客" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Python数据分析之matplotlib" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      我的第一篇博客
+      Python数据分析之matplotlib
     </h1>
   
 
         
-        <a href="/2019/11/09/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
-  	<time datetime="2019-11-09T15:11:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-09</time>
+        <a href="/2019/11/21/Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E4%B9%8Bmatplotlib/" class="archive-article-date">
+  	<time datetime="2019-11-21T01:59:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-21</time>
 </a>
 
         <!-- 不蒜子统计 -->
@@ -185,17 +186,29 @@
         
       </header>
       <div align="center" class="post-count">
-          字数：132字 | 预计阅读时长：1分钟
+          字数：263字 | 预计阅读时长：1分钟
       </div>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>经过两天的捣鼓，终于部署了一个属于自己的博客网站，以后在互联网上就有我的一个小空间，激动。虽然没什么人会来看吧，但是可以把近期学习的东西记录下来，见证自己的成长过程。</p>
+        <p>本篇文章教你学习python中的绘图库<a href="https://matplotlib.org/" target="_blank" rel="noopener">matplotlib</a>。</p>
 <a id="more"></a>
 
-<p>第一次写博客哈，不知道写点什么，就分享一下喜欢的音乐吧。</p>
-<h3 id="Dream-it-Possible"><a href="#Dream-it-Possible" class="headerlink" title="Dream it Possible"></a>Dream it Possible</h3><p>这是2019年考研的时候循环次数最多的一首歌，给了我坚持下去的动力。</p>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=38592976&auto=0&height=66"></iframe>
+<h2 id="绘制一个简单的图"><a href="#绘制一个简单的图" class="headerlink" title="绘制一个简单的图"></a>绘制一个简单的图</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">x_values = list(range(<span class="number">1</span>,<span class="number">100</span>))</span><br><span class="line">y_values = [x**<span class="number">2</span> <span class="keyword">for</span> x <span class="keyword">in</span> x_values]</span><br><span class="line">plt.scatter(x_values, y_values, c=y_values, cmap=plt.cm.Blues, edgecolors=<span class="string">'none'</span>, s=<span class="number">100</span>)</span><br><span class="line">plt.title(<span class="string">"Square Numbers"</span>, fontsize=<span class="number">24</span>)</span><br><span class="line">plt.xlabel(<span class="string">"Value"</span>, fontsize=<span class="number">14</span>)</span><br><span class="line">plt.ylabel(<span class="string">"Squares of Value"</span>, fontsize=<span class="number">14</span>)</span><br><span class="line">plt.tick_params(axis=<span class="string">'both'</span>, which=<span class="string">"major"</span>, labelsize=<span class="number">14</span>)</span><br><span class="line">plt.axis([<span class="number">0</span>,<span class="number">110</span>,<span class="number">0</span>,<span class="number">11000</span>])</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>plt.scatter  散点图</li>
+<li>plt.title 图标题<a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.title.html?highlight=title#matplotlib.pyplot.title" target="_blank" rel="noopener">matplotlib.pyplot.title</a></li>
+<li>plt.xlable 横轴标签</li>
+<li>plt.ylable 纵轴标签</li>
+<li>plt.tick_params 参数解析见<a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.tick_params.html?highlight=tick_params#matplotlib.pyplot.tick_params" target="_blank" rel="noopener">matplotlib.pyplot.tick_params</a></li>
+<li>plt.axis 坐标轴取值范围<a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.axis.html?highlight=axis#matplotlib.pyplot.axis" target="_blank" rel="noopener">matplotlib.pyplot.axis</a></li>
+</ul>
+<h2 id="绘制随机漫步图"><a href="#绘制随机漫步图" class="headerlink" title="绘制随机漫步图"></a>绘制随机漫步图</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> random <span class="keyword">import</span> choice</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">RandomWalk</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, num_points = <span class="number">5000</span>)</span>:</span></span><br><span class="line">        self.num_points = num_points</span><br><span class="line">        self.x_values = [<span class="number">0</span>]</span><br><span class="line">        self.y_values = [<span class="number">0</span>]</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">fill_walk</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">while</span> len(self.x_values) &lt; self.num_points:</span><br><span class="line">            x_direction = choice([<span class="number">1</span>,<span class="number">-1</span>])</span><br><span class="line">            x_distance = choice([<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>])</span><br><span class="line">            x_step = x_direction * x_distance </span><br><span class="line">            y_direction = choice([<span class="number">1</span>,<span class="number">-1</span>])</span><br><span class="line">            y_distance = choice([<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>])</span><br><span class="line">            y_step = y_direction * y_distance           </span><br><span class="line">            <span class="keyword">if</span> x_step == <span class="number">0</span> <span class="keyword">and</span> y_step == <span class="number">0</span>:</span><br><span class="line">                <span class="keyword">continue</span>               </span><br><span class="line">            next_x = self.x_values[<span class="number">-1</span>] + x_step</span><br><span class="line">            next_y = self.y_values[<span class="number">-1</span>] + y_step     </span><br><span class="line">            self.x_values.append(next_x)</span><br><span class="line">            self.y_values.append(next_y)          </span><br><span class="line">rw = RandomWalk()</span><br><span class="line">rw.fill_walk()</span><br><span class="line">plt.figure(figsize=(<span class="number">10</span>,<span class="number">6</span>))</span><br><span class="line">plt.scatter(rw.x_values,rw.y_values, s=<span class="number">15</span>)</span><br><span class="line">plt.axes().get_xaxis().set_visible(<span class="literal">False</span>)</span><br><span class="line">plt.axes().get_yaxis().set_visible(<span class="literal">False</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="Colormap-reference"><a href="#Colormap-reference" class="headerlink" title="Colormap reference"></a><a href="https://matplotlib.org/gallery/color/colormap_reference.html#sphx-glr-gallery-color-colormap-reference-py" target="_blank" rel="noopener">Colormap reference</a></h2><p>可以修改颜色</p>
+
       
 
 
@@ -235,6 +248,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color3">python matplotlib</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -285,7 +309,7 @@
     <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=2019/11/09/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=2019/11/21/Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E4%B9%8Bmatplotlib/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -299,15 +323,20 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/11/19/%E4%BB%8E0%E5%88%B01%EF%BC%8C%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/12/06/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B9%8B%E4%BA%8B%E7%89%A9%E5%A4%84%E7%90%86/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          从0到1，搭建Hexo博客
+          数据库之事物处理
         
       </div>
     </a>
   
+  
+    <a href="/2019/11/21/Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E4%B9%8Bpandas/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Python数据分析之pandas</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
@@ -332,7 +361,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Dream-it-Possible"><span class="toc-number">1.</span> <span class="toc-text">Dream it Possible</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#绘制一个简单的图"><span class="toc-number">1.</span> <span class="toc-text">绘制一个简单的图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#绘制随机漫步图"><span class="toc-number">2.</span> <span class="toc-text">绘制随机漫步图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Colormap-reference"><span class="toc-number">3.</span> <span class="toc-text">Colormap reference</span></a></li></ol>
                     </div>
                 </span>
             </div>
